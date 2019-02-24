@@ -7,6 +7,6 @@ cd ~/setup
 sudo ./nodeSetup.sh node{#}
 ```
  
-where # is the number of the node.
+Replace {#} with the number of the node.
 
-node# will replace the default hostname of `raspberry`.
+`node{#}` will replace the default hostname of `raspberry`.
