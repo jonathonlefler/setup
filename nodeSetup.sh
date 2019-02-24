@@ -13,7 +13,9 @@ echo "Installing pyserial"
 pip3 install pyserial
 echo "Enabling serial UART"
 sed -i -e 's/ console=serial0,115200//g' /boot/cmdline.txt
-echo 'enable_usart=1' >> /boot/config.txt
+echo 'enable_uart=1' >> /boot/config.txt
+echo "Enabling SPI"
+echo 'dtparam=spi=on' >> /boot/config.txt
 echo "Downloading LMIC"
 git clone https://github.com/wklenk/lmic-rpi-lora-gps-hat.git
 chown -R pi:pi lmic-rpi-lora-gps-hat
