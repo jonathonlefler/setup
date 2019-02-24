@@ -1,8 +1,16 @@
 #!/bin/bash
 echo "Initializing $1"
+echo "Adding user pi to dialout"
+usermod -a -G dialout pi
 cd /home/pi
 echo "Downloading git"
 apt install git
+echo "Installing rpi.gpio"
+apt install rpi.gpio
+echo "Installing pip3"
+apt install python3-pip
+echo "Installing pyserial"
+pip3 install pyserial
 echo "Downloading LMIC"
 git clone https://github.com/wklenk/lmic-rpi-lora-gps-hat.git
 chown -R pi:pi lmic-rpi-lora-gps-hat
