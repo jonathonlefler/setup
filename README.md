@@ -2,6 +2,7 @@
 Setup internet connect first, then run the commands below.
 
 ```
+sudo apt install git
 git clone https://github.com/jonathonlefler/setup.git
 cd ~/setup
 sudo ./nodeSetup.sh node{#}
