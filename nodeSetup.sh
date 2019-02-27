@@ -34,4 +34,5 @@ sed -i -e 's/XKBLAYOUT="gb"/XKBLAYOUT="us"/g' /etc/default/keyboard
 echo "Changing Hostname"
 sed -i -e "s/raspberrypi/$1/g" /etc/hostname
 sed -i -e "s/raspberrypi/$1/g" /etc/hosts
+echo "Installing fail2ban"
 reboot
